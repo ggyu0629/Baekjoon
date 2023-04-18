@@ -21,7 +21,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
+        StringBuilder sb = new StringBuilder();
+        
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
@@ -70,15 +71,15 @@ public class Main {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if(visited[i][j]){
-                    System.out.print(map[i][j] + " ");
+                    sb.append(map[i][j]).append(" ");
                 }else{
-                    System.out.print(-1 + " ");
+                    sb.append(-1).append(" ");
                 }
             }
-            System.out.println();
+            sb.append("\n");
         }
 
-
+        System.out.println(sb);
     }
 
     public static class Pos{
