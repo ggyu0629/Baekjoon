@@ -23,9 +23,8 @@ public class Main {
                 min.add(num);
 
             if(!min.isEmpty() && !max.isEmpty() && min.peek() < max.peek()){
-                int minPoll = min.poll();
                 min.add(max.poll());
-                max.add(minPoll);
+                max.add(min.poll());
             }
 
             sb.append(max.peek()).append("\n");
