@@ -20,13 +20,14 @@ class Solution {
                 int[] temp = q.poll();
 
                 for(int j=0; j<temp.length; j++) {
-                    if(!visit[j]) {
-                        if(temp[j] == 0)
-                            continue;
-                        
-                        q.add(computers[j]);
-                        visit[j] = true;
-                    }
+                    if(visit[j])
+                        continue;
+                
+                    if(temp[j] == 0)
+                        continue;
+
+                    q.add(computers[j]);
+                    visit[j] = true;
                 }
             }
             answer++;
