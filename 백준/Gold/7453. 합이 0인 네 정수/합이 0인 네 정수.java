@@ -19,6 +19,11 @@ public class Main {
             }
         }
 
+        Arrays.sort(arr[0]);
+        Arrays.sort(arr[1]);
+        Arrays.sort(arr[2]);
+        Arrays.sort(arr[3]);
+        
         long[][] sumTwoArr = new long[2][n*n];
 
         for (int i = 0; i < n; i++) {
