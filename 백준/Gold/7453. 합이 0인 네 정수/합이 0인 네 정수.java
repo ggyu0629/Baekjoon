@@ -17,7 +17,7 @@ public class Main {
         Arrays.sort(arr[1]);
         Arrays.sort(arr[2]);
         Arrays.sort(arr[3]);
-        long[][] sumTwoArr = new long[2][n*n];
+        int[][] sumTwoArr = new int[2][n*n];
         for (int i = 0; i < n; i++) 
             for (int j = 0; j < n; j++) {
                 sumTwoArr[0][n*i + j] = arr[0][i] + arr[1][j];
